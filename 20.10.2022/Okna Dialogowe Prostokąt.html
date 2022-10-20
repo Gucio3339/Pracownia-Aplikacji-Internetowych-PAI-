@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <body>
+            <script>
+
+                index = 0;
+                prostokat = confirm("Czy chcesz wyświetlić prostokąt?")
+
+                var kolumna = parseInt(prompt("Podaj ile chcesz kolumn: ", "5"));
+                var wiersz = parseInt(prompt("Podaj ile chcesz wierszy: ", "10"));
+
+                if(prostokat)
+                {
+                    for(i = 0; i < kolumna; i++)
+                {
+                    for(j = 0; j < wiersz; j++)
+                    {
+                        if (index == odleglosc)
+                        {
+                            document.write(znak)
+                            index = 0;
+                        }
+                        else
+                        {
+                            document.write("*");
+                            index++;
+                        }
+                    }
+                    index = 0;
+                    document.write("<br>")
+                }
+                }
+                else
+                {
+                    for(var i = 0; i < 30; i++)
+                    {
+                        document.write("*")
+                    }
+
+                    index = 0;
+                    document.write("<br>")
+                }
+            </script>
+        </body>
+    </head>
+</html>
