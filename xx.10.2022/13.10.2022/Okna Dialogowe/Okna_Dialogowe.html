@@ -1,0 +1,35 @@
+<!--<html>
+    <head>
+        <body>
+            <script type="text/JavaScript">
+                if (confirm("Czy lubisz Pizze?")) {
+                    var pizza = prompt("Jaką?", "Na pewno nie hawajska");
+                    document.write("Twoja Pizza to: "+pizza);
+                }
+                    else {
+                    alert("Szkoda");
+                    }
+            </script>
+        </body>
+    </head>
+</html>
+-->
+
+<html>
+    <head>
+        <body>
+            <script type="text/JavaScript">
+                var wys = parseInt(prompt("Podaj wysokość prostokąta: ", "5cm"));
+                var szer = parseInt(prompt("Podaj szerokość prostokąta: ", "10cm"));
+                for(i=0; i<wys; i++)
+                {
+                    for(j=0; j<szer; j++)
+                    {
+                        document.write("*")
+                    }
+                    document.write("<br>")
+                }
+            </script>
+        </body>
+    </head>
+</html>

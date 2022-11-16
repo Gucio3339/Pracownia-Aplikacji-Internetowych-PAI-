@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <input type="text" id="Imię">
+        <button onclick="display1()">Wyślij</button>
+        <p id="test2"> ... </p>
+        
+        <form>
+            <legend>Pytanie 1: Ile lat ma Jarosław</legend>
+            <input type="radio" value="A" name="radio"> 15
+            <input type="radio" value="B" name="radio"> 2
+            <input type="radio" value="C" name="radio" checked> -60
+        </form>
+        
+        <button onclick="display2()">Wyślij</button>
+        <p id="test5"> ... </p>
+        
+        <script type="text/javascript">
+        function display2() {
+            var field = document.getElementsByName('radio');
+            var value1;
+            for(var i = 0; i < field.length; i++){
+                if(field[i].checked){
+                    value1 = field[i].value;
+                }
+            }
+            document.getElementById("test5").textContent = value1;
+        }
+        </script>
+        
+        <form>
+            <legend>Pytanie 2: Jak na nazwisko ma Jarosław</legend>
+            <input type="radio" value="A" name="radio"> Nie wiem
+            <input type="radio" value="B" name="radio"> Gałęcki
+            <input type="radio" value="C" name="radio" checked> Szkolny
+        </form>
+        
+        <button onclick="display3()">Wyślij</button>
+        <p id="test4"> ... </p>
+        
+        <script type="text/javascript">
+        function display3() {
+            var field = document.getElementsByName('radio');
+            var value1;
+            for(var i = 0; i < field.length; i++){
+                if(field[i].checked){
+                    value1 = field[i].value;
+                }
+            }
+            document.getElementById("test4").textContent = value1;
+        }
+        </script>
+
+        <form>
+            <legend>Pytanie 3: Gdzie mieszkasz?</legend>
+            <input type="checkbox" value="Moskwa" name="miasto" /> Moskwa<br>
+            <input type="checkbox" value="Tokyo" name="miasto" /> Tokyo<br>
+            <input type="checkbox" value="Oslo" name="miasto" /> Oslo<br>
+            <input type="checkbox" value="Wadowice" name="miasto" /> Wadowice<br>
+        </form>
+        <button onclick="display4()">Wyślij</button>
+        <p id="test3"> ... </p>
+
+        <script type="text/javascript">
+        function display4() {
+            var field = document.getElementsByName('miasto');
+            var value1 ='';
+            for(var i = 0; i < field.length; i++){
+                if(field[i].checked){
+                    value1 = value1+' '+ field[i].value;
+                }
+            }
+            if (value1=='') value1="Nie dokonałeś żadnego wyboru.";
+            
+            document.getElementById("test3").textContent = value1;
+        }
+        </script>
+
+        <form>
+            <legend>Pytanie 4: W jakim kraju mieszka Jarosław?</legend>
+            <select id="Kraj">
+                <option value="Szwecja">Szwecja</option>
+                <option value="Rumunia">Rumunia</option>
+                <option value="Francja">Francja</option>
+                <option value="Serbia">Serbia</option>
+            </select>
+        </form>
+        <button onclick="display5()">Wyślij</button><br>
+        value: <div id="pole1"> ... </div>
+        selectedIndex: <div id="pole2"> ... </div>
+        length: <div id="pole3"> ... </div>
+
+        <script type="text/javascript">
+        function display5() {
+            var field = document.getElementById('Kraj');
+            
+            document.getElementById("pole1").textContent = field.value;
+            document.getElementById("pole2").textContent = field.selectedIndex;
+            document.getElementById("pole3").textContent = field.length;
+        }
+        </script>
+
+        <script  type="text/javascript">
+            function display() {
+            var napis = document.getElementById("Imię").value;
+            document.getElementById("test2").textContent = napis;
+        }
+        </script>
+    </body>
+</html>
