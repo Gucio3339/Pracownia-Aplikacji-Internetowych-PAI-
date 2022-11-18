@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+<body>
+    
+    <input type="number" id="Pozyczka">
+    <input type="number" id="Czas">
+    <input type="number" id="Oprocentowanie">
+    <button onclick="display()">Sprawdź ratę</button>
+    <p id="Pozyczka1"> Kwota pożyczki </p>
+    <p id="Czas2"> Czas spłacania (msc) </p>
+    <p id="Oprocentowanie3"> Oprocentowanie (%) </p>
+    <p id="Wynik"></p>
+
+
+
+    <script type="text/javascript">
+        function display() {
+            let Pozyczka = parseFloat(document.getElementById("Pozyczka").value);
+            let Czas = parseInt(document.getElementById("Czas").value)
+            let Oprocentowanie = parseFloat(document.getElementById("Oprocentowanie").value);
+
+            document.getElementById("Pozyczka1").textContent = Pozyczka;
+            document.getElementById("Czas2").textContent = Czas;
+            document.getElementById("Oprocentowanie3").textContent = Oprocentowanie;  
+            
+            document.getElementById("Wynik").textContent = Obliczanie(Pozyczka,Czas,Oprocentowanie);
+        }
+        
+
+        
+
+        function Obliczanie(p,c,o) {
+            var Wynik = (p/c)+(p*((o/100)/c))
+            return Wynik
+        }
+    </script>
+
+
+</body>
+</html>
+
+
+
+

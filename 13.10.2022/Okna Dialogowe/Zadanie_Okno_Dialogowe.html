@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <body>
+            <script type="text/JavaScript">
+                index = 0;
+
+                var kolumna = parseInt(prompt("Podaj ile chcesz kolumn: ", "5"));
+                var wiersz = parseInt(prompt("Podaj ile chcesz wierszy: ", "10"));
+                var znak = prompt("Podaj jaki znak dodatkowy chcesz wyświetlić: ", "- lub =");
+                var odleglosc = parseInt(prompt("Podaj co ile chcesz wyświetlać znak dodatkowy: ", "3"));
+
+                for(i = 0; i < kolumna; i++)
+                {
+                    for(j = 0; j < wiersz; j++)
+                    {
+                        if (index == odleglosc)
+                        {
+                            document.write(znak)
+                            index = 0;
+                        }
+                        else
+                        {
+                            document.write("*");
+                            index++;
+                        }
+                    }
+                    index = 0;
+                    document.write("<br>")
+                }
+            </script>
+        </body>
+    </head>
+</html>

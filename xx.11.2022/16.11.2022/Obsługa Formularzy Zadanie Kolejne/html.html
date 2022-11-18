@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+<body> 
+    <input type="number" id="szerokosc"> </br>
+    <p id="szerokosc1"> </p>
+
+    <input type="number" id="wysokosc"> </hr>
+    <button onclick="display()">Wyślij</button>
+    <p id="wysokosc1"> ... </p>
+
+    <script type="text/javascript">
+        function display() {
+            var szerokosci = document.getElementById("szerokosc").value;
+
+            {
+                for(var x = 1; x <= szerokosci; x++){
+                    document.write("*")
+                }
+            }
+            var wysokosci = document.getElementById("wysokosc").value;
+            {
+                for(var y = 1; y <= wysokosci; y++){
+                    document.write("*")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
