@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="number" id="liczby"> Podaj Pierwszą liczbę</br>
+        <p id="liczby1"> </p>
+        <input type="number" id="liczby2"> Podaj Drugą liczbę</br>
+        <p id="liczby2"> </p>
+
+            
+        <form>
+            <legend>Co chcesz wykonać?</legend>
+            <input type="radio" value="+" name="radio"> +
+            <input type="radio" value="-" name="radio"> -
+            <input type="radio" value="/" name="radio"> /
+            <input type="radio" value="*" name="radio"> *
+            <button onclick="tak()">Wyślij</button>
+            <script type="text/javascript">
+                var matma = document.getElementById("liczby").value;
+                var matma2 = document.getElementById("liczby2").value;
+                var matma3 = document.getElementByName("radio");
+                for(mat=1; mat<=liczby2; ++mat) {
+                        alert(mat)
+                        }  
+
+            </script>
+        </form>
+    </body>
+</html>
