@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <h1>Tom Głodny</h1>
+        <h2>Jedzenie posiłków przez Toma</h2>
+
+        <p>Kliknij "zjedz" aby zjeść posiłek (index 0)</p>
+        <button onclick="myFunction()">Zjedz</button>
+
+        <ul id="myList">
+            <li>Płotka</li>
+            <li>Karaś</li>
+            <li>Jerry</li>
+            <li>Ser</li>
+            <li>Karp</li>
+            <li>Szynka</li>
+            <li>Ogórek</li>
+            <li>Cebula ma warstwy</li>
+            <li>Pomidor</li>
+            <li>Papryka</li>
+            <li>Łosoś</li>
+            <li>Woda</li>
+            <li>Mleko</li>
+            <li>Krew</li>
+            <li>Mleko Kokosowe</li>
+            <li>Sok Pomarańczowy</li>
+            <li>Energetyk</li>
+            <li>Piwo</li>
+            <li>Mojito</li>
+            <li>Kompot</li>
+            <li>Sok Jabłkowy</li>
+            <li>Wódka</li>
+        </ul>
+
+        <p id="test">
+
+        </p>
+
+        <script type ="text/javascript">
+            function myFunction() {
+                var list = document.getElementById("myList");
+                if (list.hasChildNodes()) {
+                    list.removeChild(list.children[0]);
+                }
+                if(list.children[0]==undefined) {
+                    document.write("Najedzony i napity")
+                }
+            }
+        </script>
+    </body>
+</html>
