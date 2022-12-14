@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <legend>Wolisz kawę czy herbatę?</legend>
+            <input type="checkbox" value="Kawa" name="Napoj" /> Kawa<br>
+            <input type="checkbox" value="Herbata" name="Napoj" /> Herbata<br>
+            <input type="text" id = "text"><br>
+        </form>
+        <button onclick="display()">Wyślij</button><br>
+        <p id="test"> ... </p>
+        <script type="text/javascript">
+            function display() {
+                var test1 = document.getElementById("text")
+                var test2 = document.getElementsByName("Napoj")
+                let test3 = document.getElementById("test")
+                for (rodzaj = 0; rodzaj < test2.length; rodzaj++){
+                    if (test2[rodzaj].checked) {
+                        Mati = test2[rodzaj].value
+                    }
+                }
+                test3.innerHTML = "Lubisz pić z rana " + Mati + " " + test1.value;
+            }
+        </script>
+    </body>
+</html>
