@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <input type="number">
+    <input type="text">
+    <button onclick="funkcja(zmiana)"> Przepisz </button>
+        <img style = "width: 300px; height: 200px;" id="test3" onmouseover="MATI4()" onmouseout="MATI5()" src="pobrane.jpg">
+        <p id="test" onclick="MATI()">test</p> 
+        <p id="test2" onmouseover="MATI2()" onmouseout="MATI3()">test</p>  
+    <script>
+        function MATI()
+        {
+            var test=document.getElementById("test");
+
+            test.innerHTML = "Kocham Matiego Bardzo <3 ;*";
+        }
+
+        function MATI2()
+        {
+            var test=document.getElementById("test2");
+
+            test.innerHTML = "Napijemy się?";
+        }
+
+        function MATI3()
+        {
+            var test=document.getElementById("test2");
+
+            test.innerHTML = "test";
+        }
+    </script>
+    <script>
+        function MATI4()
+        {
+            var test=document.getElementById("test3")
+
+            test.src="lostriver.jpg"
+        }
+        function MATI5()
+        {
+            var test=document.getElementById("test3")
+
+            test.src="pobrane.jpg"
+        }   
+    </script>
+</html>
